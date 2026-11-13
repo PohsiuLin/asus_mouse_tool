@@ -1,0 +1,3 @@
+# ASUS ROG GLADIUS III CORE (VID 0b05, PID 1c8d)
+# 側鍵 report 在 USB interface 02, 以 bInterfaceNumber 限定, 避免 symlink 指到其他 interface
+KERNEL=="hidraw*", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1c8d", ATTRS{bInterfaceNumber}=="02", MODE="0660", GROUP="plugdev", SYMLINK+="asus_mouse"

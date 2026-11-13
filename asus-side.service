@@ -1,0 +1,12 @@
+[Unit]
+Description=ASUS mouse side button remap
+# 滑鼠不在時程式會離開並每隔數秒重試, 關閉 start limit 避免被 systemd 判定失敗而停止
+StartLimitIntervalSec=0
+
+[Service]
+ExecStart=/usr/local/bin/asus_side
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
