@@ -200,7 +200,8 @@ ls -l /dev/asus_mouse
 - **bit5(0x20)** 未出現於測試 dump,可能對應其他按鍵(如 DPI 鍵),待確認。
 - 拔除滑鼠時程式離開,由 systemd 每 2 秒重試並重新掃描裝置。裝置比對條件寫死為 ROG GLADIUS III CORE 的 VID/PID 與 interface 02。
 - 僅在 ROG GLADIUS III CORE 上驗證;其他 ASUS 滑鼠的 report 格式可能不同。
-
+- 同時接多支同型號滑鼠時,只會使用掃描到的第一支;同款滑鼠的其他變體(有線/無線等)PID 可能不同,需自行修改 MOUSE_PID。
+  
 ## 檔案
 
 | 檔案 | 說明 |
